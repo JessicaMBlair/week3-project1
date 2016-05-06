@@ -2,12 +2,38 @@
 
 // 1. Define a function called "divideByTwo". It should accept one parameter called "number".
 //    The function should divide the number by two and output the answer.
+function divideByTwo(number) {
+	number = number / 2;
+	console.log(number)
+}
+
+divideByTwo(8);
 
 // 2. Define a function called "greeting". It should accept two parameters, which will be names.
 //    The function should output the a greeting to both people.
+function greeting(person) {
+	console.log('Hello ' + person);
+}
+
+greeting('Bob');
+greeting('Linda');
+
 
 // 3. You use Amazon Subscribe & Save to have six cans of cashews automatically sent to you each month, but the price keeps changing.
 //    Write a function that takes the price per unit and calculates the total for you each month.
+var c_total = function(){
+for (var c_month=0; c_month <= 12; c_month++) {
+                                console.log(c_month + " $" + c_price*c_qty);
+        c_price = c_price+0.25;
+}
+   
+};
+ 
+var c_price = 4;
+var c_qty = 6;
+ 
+c_total();
+
 
 // 4. Write a function that accepts the following array and separates the people into two teams.
 //    No names next to eachother in the array should be on the same team.
@@ -15,12 +41,46 @@
 
 // 5. Define a function called "quarter". It accepts one parameter called "number".
 //    The function will return a value which is one quarter of the number provided.
+var quarter = function() {
+	console.log(number * 0.25);
+};
+var number = 80;
+quarter(number);
+
 
 // 6. Define functions called "area" and "perimeter". They should both accept two parameters and calculate the area and perimeter of a rectangle.
+function area (length, width) {
+	return length * width;
+}
+
+function perimeter (length, width) {
+	return (length + width) * 2;	
+}
+
+var totalArea = area(3,4);
+console.log(totalArea);
+
+var totalPerimeter = perimeter(3,4);
+console.log(totalPerimeter);
+
+var rectangle = totalArea * totalPerimeter;
+console.log(rectangle);
+
 
 // 7. Write a function called "sleepings", it should accept one parameter, an integer called "hours".
 //    Write a conditional statement inside of the function. If the number of hours is more than 8, print a statement to the console about getting enough rest.
 //    If the number of hours is less than 8, print a statement recommending the user get more shut eye.
+function sleepings(hours) {
+	if (hours > 8) {
+		console.log('You are well rested!');
+	} else {
+		console.log('Sleep more.');
+	}
+}
+
+var hours = 15;
+sleepings(hours);
+
 
 // 8. Prompt a user to enter a three digit number. Write a function that adds the numbers together.
 //    HINT: You may need to google how to turn a string into an integer. 
@@ -30,9 +90,26 @@
 //     The function should take each number of coins and multiply it times each coin's value.
 //     Finally, it should return the total amount of change you have in the following format: "$32.77"
 //     HINT: Googling the toFixed method will help you with the format.
+function myMoney (quarters, dimes, nicklels, pennies) {
+	var totalMoney = (quarters * 0.25) + (dimes * 0.10) + (nickels * 0.05) + (pennies * 0.01);
+	console.log('You have ' + totalMoney.toFixed(2));
+};
+
+
+console.log("Question 9");
+myMoney(13,2,11,16);
+
+
 
 // 10. Develop a function that determines a person's age by prompting them for their birth year.
-
+var birthYear = prompt("What year were you born?");
+function findAge() {
+	console.log('Your age is ' + (currentYear - birthYear));
+}
+ var currentYear= 2016;
+ findAge(birthYear);
+ 
+ 
 
 // 11. Develop a function that cleans up a phone number entered by a user.
 //     The rules are as follows:
